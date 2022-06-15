@@ -1,0 +1,28 @@
+.header {
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 9;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+}
+   .rightContainer {
+      display: flex;
+      justify-content: flex-end;
+   }
+   .brand {
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background: #FFFFFF;
+    :first-child {
+      color: black;
+      text-transform: capitalize;
+      :hover {
+        color: #bdbdbd;
+      }
+    }
+  }
