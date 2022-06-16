@@ -1,0 +1,18 @@
+@import "../select-custom.scss";
+.search {
+    &-area {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $borderColor;
+      border-radius: 8px;
+      // width: 100%;
+      padding: 8px;
+      gap: 8px;
+    }
+    &-empty{
+        min-height: 56px;
+    }
+  }
+  
