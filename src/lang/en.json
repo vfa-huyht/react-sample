@@ -1,3 +1,9 @@
 {
-  "welcome": "Hello"
+  "welcome": "Hello",
+  "originAddress": "From",
+  "destinationAddress": "To",
+  "goods": "Goods",
+  "placePort": "Place name, port name, etc.",
+  "resultEmpty": "No matching results",
+  "history": "History"
 }

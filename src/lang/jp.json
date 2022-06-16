@@ -1,3 +1,9 @@
 {
-  "welcome": "おはよう"
+  "welcome": "おはよう",
+  "originAddress": "出荷地",
+  "destinationAddress": "到着地",
+  "goods": "貨物",
+  "placePort": "地名、ポート名など",
+  "resultEmpty": "一致する結果がありません",
+  "history": "ヒストリー"
 }

@@ -1,4 +1,5 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import process from 'process';
 
 axios.defaults.timeout = 360000;
 
@@ -24,8 +25,9 @@ const setupInterceptorsTo = (axiosInstance: AxiosInstance): AxiosInstance => {
   axiosInstance.interceptors.response.use(onResponse, onResponseError);
   return axiosInstance;
 }
-
-const api = axios.create({ baseURL: process.env.API_URL });
+console.log(process.env.API_URL)
+// const api = axios.create({ baseURL: process.env.API_URL});
+const api = axios.create({ baseURL: "http://localhost:5000"});
 setupInterceptorsTo(api);
 
 export default api;
