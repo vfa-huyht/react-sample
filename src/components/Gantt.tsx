@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import CollapsibleTable from './common/CollapsibleTable';
 import { Box, Container } from '@mui/material';
 import Calendar from './common/Calendar';
+import { useState } from 'react';
 
 const data = [
     {
         name: 'HuyHT',
         from: '10-01-2023',
-        to: '10-13-2023',
+        to: '10-23-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -17,7 +18,7 @@ const data = [
     {
         name: 'HuyHT',
         from: '10-05-2023',
-        to: '10-08-2023',
+        to: '10-28-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -25,8 +26,8 @@ const data = [
     },
     {
         name: 'HuyHT',
-        from: '10-01-2023',
-        to: '10-03-2023',
+        from: '10-11-2023',
+        to: '11-01-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -35,7 +36,7 @@ const data = [
     {
         name: 'HuyHT',
         from: '10-03-2023',
-        to: '10-04-2023',
+        to: '10-14-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -44,7 +45,7 @@ const data = [
     {
         name: 'HuyHT',
         from: '10-16-2023',
-        to: '10-27-2023',
+        to: '1-17-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -53,7 +54,7 @@ const data = [
     {
         name: 'HuyHT',
         from: '10-23-2023',
-        to: '10-29-2023',
+        to: '11-02-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -62,7 +63,7 @@ const data = [
     {
         name: 'HuyHT',
         from: '10-24-2023',
-        to: '10-25-2023',
+        to: '11-25-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -71,7 +72,7 @@ const data = [
     {
         name: 'HuyHT',
         from: '11-01-2023',
-        to: '11-05-2023',
+        to: '12-05-2023',
         task: '...',
         detail: '...',
         subtasks: [{
@@ -86,7 +87,7 @@ const data = [
         {
             name: 'HuyHT',
             from: '11-04-2023',
-            to: '11-05-2023',
+            to: '12-05-2023',
             task: '...',
             detail: '...',
             subtasks: [],
@@ -177,6 +178,18 @@ const data = [
 ]
 
 function Gantt() {
+    const [selectedItem, setselectedItem] = useState()
+    const [indexClick, setIndexClick] = useState({})
+    const getRow = (item: any) => {
+        setselectedItem(item)
+    }
+    const expandRow = (index: any) => {
+        setIndexClick(i => {
+            const temp = { ...i }
+            temp[index] = !temp[index]
+            return temp
+        })
+    }
     return (
         <div>
             <Container maxWidth="xl">
@@ -185,8 +198,8 @@ function Gantt() {
                     gap: 1,
                     gridTemplateColumns: 'repeat(2, 1fr)',
                 }}>
-                    <CollapsibleTable data={data}></CollapsibleTable>
-                    <Calendar data={data}></Calendar>
+                    <CollapsibleTable data={data} rowClick={getRow} expandRow={expandRow}></CollapsibleTable>
+                    <Calendar indexClick={indexClick} data={data} selectedItem={selectedItem}></Calendar>
                 </Box>
             </Container>
 

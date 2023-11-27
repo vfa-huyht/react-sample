@@ -13,21 +13,24 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 
 
-function Row(props: { row: any }) {
-  const { row } = props;
+function Row(props: { row: any, rowClick: any, expandRow: any, index: any }) {
+  const { row, rowClick, expandRow, index } = props;
   const [open, setOpen] = React.useState(false);
-
 
 
   return (
     <React.Fragment>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+
+      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} onClick={() => rowClick(row)}>
         <TableCell style={{ width: '50px' }}>
           {
             row.subtasks && row.subtasks.length > 0 && <IconButton
               aria-label="expand row"
               style={{ width: 18, height: 18 }}
-              onClick={() => setOpen(!open)}
+              onClick={() => {
+                expandRow(index)
+                setOpen(!open)
+              }}
             >
               {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
             </IconButton>
@@ -49,7 +52,7 @@ function Row(props: { row: any }) {
               </TableHead>
               <TableBody>
                 {row.subtasks.map((item: any) => (
-                  <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+                  <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} onClick={() => rowClick(item)}>
                     <TableCell style={{ width: '50px' }}></TableCell>
                     <TableCell style={{ width: '20%' }}>{item.name}</TableCell>
                     <TableCell style={{ width: '10%' }}>{item.task}</TableCell>
@@ -66,8 +69,8 @@ function Row(props: { row: any }) {
     </React.Fragment>
   );
 }
-export default function CollapsibleTable(props: { data: any }) {
-  const { data } = props
+export default function CollapsibleTable(props: { data: any, rowClick: any, expandRow: any }) {
+  const { data, rowClick, expandRow } = props
   return (
     <TableContainer component={Paper} style={{ maxHeight: 900 }}>
       <Table stickyHeader aria-label="collapsible table">
@@ -82,8 +85,8 @@ export default function CollapsibleTable(props: { data: any }) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((item: any) => (
-            <Row key={item.name} row={item} />
+          {data.map((item: any, index: any) => (
+            <Row key={item.name} row={item} rowClick={rowClick} expandRow={expandRow} index={index} />
           ))}
         </TableBody>
       </Table>
