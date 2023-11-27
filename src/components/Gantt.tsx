@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const data = [
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-01-2023',
         to: '10-23-2023',
         task: '...',
@@ -16,7 +16,7 @@ const data = [
         status: 2
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-05-2023',
         to: '10-28-2023',
         task: '...',
@@ -25,7 +25,7 @@ const data = [
         status: 2
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-11-2023',
         to: '11-01-2023',
         task: '...',
@@ -34,7 +34,7 @@ const data = [
         status: 2
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-03-2023',
         to: '10-14-2023',
         task: '...',
@@ -43,7 +43,7 @@ const data = [
         status: -1
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-16-2023',
         to: '1-17-2023',
         task: '...',
@@ -52,7 +52,7 @@ const data = [
         status: -1
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-23-2023',
         to: '11-02-2023',
         task: '...',
@@ -61,7 +61,7 @@ const data = [
         status: 2
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '10-24-2023',
         to: '11-25-2023',
         task: '...',
@@ -70,13 +70,13 @@ const data = [
         status: -1
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '11-01-2023',
         to: '12-05-2023',
         task: '...',
         detail: '...',
         subtasks: [{
-            name: 'HuyHT',
+            name: 'John',
             from: '11-02-2023',
             to: '11-04-2023',
             task: '...',
@@ -85,7 +85,7 @@ const data = [
             status: 0
         },
         {
-            name: 'HuyHT',
+            name: 'John',
             from: '11-04-2023',
             to: '12-05-2023',
             task: '...',
@@ -96,13 +96,13 @@ const data = [
         status: 0
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '11-06-2023',
         to: '11-12-2023',
         task: '...',
         detail: '...',
         subtasks: [{
-            name: 'HuyHT',
+            name: 'John',
             from: '11-06-2023',
             to: '11-08-2023',
             task: '...',
@@ -111,7 +111,7 @@ const data = [
             status: 0
         },
         {
-            name: 'HuyHT',
+            name: 'John',
             from: '11-08-2023',
             to: '11-09-2023',
             task: '...',
@@ -119,7 +119,7 @@ const data = [
             subtasks: [],
             status: 0
         }, {
-            name: 'HuyHT',
+            name: 'John',
             from: '11-09-2023',
             to: '11-12-2023',
             task: '...',
@@ -130,7 +130,7 @@ const data = [
         status: 0
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '11-01-2023',
         to: '11-11-2023',
         task: '...',
@@ -139,7 +139,7 @@ const data = [
         status: 1
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '11-23-2023',
         to: '11-28-2023',
         task: '...',
@@ -148,7 +148,7 @@ const data = [
         status: 1
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '11-29-2023',
         to: '11-30-2023',
         task: '...',
@@ -157,7 +157,7 @@ const data = [
         status: 1
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '12-03-2023',
         to: '12-09-2023',
         task: '...',
@@ -165,7 +165,7 @@ const data = [
         subtasks: []
     },
     {
-        name: 'HuyHT',
+        name: 'John',
         from: '12-07-2023',
         to: '12-14-2023',
         task: '...',
