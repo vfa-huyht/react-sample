@@ -2,21 +2,82 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CollapsibleTable from './common/CollapsibleTable';
 import { Box, Container } from '@mui/material';
+import Calendar from './common/Calendar';
 
-Gantt.propTypes = {
-
-};
 const data = [
     {
         name: 'HuyHT',
-        from: '01-01-2023',
-        to: '01-05-2023',
+        from: '10-01-2023',
+        to: '10-13-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: 2
+    },
+    {
+        name: 'HuyHT',
+        from: '10-05-2023',
+        to: '10-08-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: 2
+    },
+    {
+        name: 'HuyHT',
+        from: '10-01-2023',
+        to: '10-03-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: 2
+    },
+    {
+        name: 'HuyHT',
+        from: '10-03-2023',
+        to: '10-04-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: -1
+    },
+    {
+        name: 'HuyHT',
+        from: '10-16-2023',
+        to: '10-27-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: -1
+    },
+    {
+        name: 'HuyHT',
+        from: '10-23-2023',
+        to: '10-29-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: 2
+    },
+    {
+        name: 'HuyHT',
+        from: '10-24-2023',
+        to: '10-25-2023',
+        task: '...',
+        detail: '...',
+        subtasks: [],
+        status: -1
+    },
+    {
+        name: 'HuyHT',
+        from: '11-01-2023',
+        to: '11-05-2023',
         task: '...',
         detail: '...',
         subtasks: [{
             name: 'HuyHT',
-            from: '01-02-2023',
-            to: '01-04-2023',
+            from: '11-02-2023',
+            to: '11-04-2023',
             task: '...',
             detail: '...',
             subtasks: [],
@@ -24,8 +85,8 @@ const data = [
         },
         {
             name: 'HuyHT',
-            from: '01-04-2023',
-            to: '01-05-2023',
+            from: '11-04-2023',
+            to: '11-05-2023',
             task: '...',
             detail: '...',
             subtasks: [],
@@ -35,14 +96,14 @@ const data = [
     },
     {
         name: 'HuyHT',
-        from: '01-06-2023',
-        to: '01-12-2023',
+        from: '11-06-2023',
+        to: '11-12-2023',
         task: '...',
         detail: '...',
         subtasks: [{
             name: 'HuyHT',
-            from: '01-06-2023',
-            to: '01-08-2023',
+            from: '11-06-2023',
+            to: '11-08-2023',
             task: '...',
             detail: '...',
             subtasks: [],
@@ -50,16 +111,16 @@ const data = [
         },
         {
             name: 'HuyHT',
-            from: '01-08-2023',
-            to: '01-09-2023',
+            from: '11-08-2023',
+            to: '11-09-2023',
             task: '...',
             detail: '...',
             subtasks: [],
             status: 0
         }, {
             name: 'HuyHT',
-            from: '01-09-2023',
-            to: '01-12-2023',
+            from: '11-09-2023',
+            to: '11-12-2023',
             task: '...',
             detail: '...',
             subtasks: [],
@@ -69,8 +130,8 @@ const data = [
     },
     {
         name: 'HuyHT',
-        from: '01-01-2023',
-        to: '01-11-2023',
+        from: '11-01-2023',
+        to: '11-11-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -78,8 +139,8 @@ const data = [
     },
     {
         name: 'HuyHT',
-        from: '01-23-2023',
-        to: '01-28-2023',
+        from: '11-23-2023',
+        to: '11-28-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -87,8 +148,8 @@ const data = [
     },
     {
         name: 'HuyHT',
-        from: '01-29-2023',
-        to: '01-30-2023',
+        from: '11-29-2023',
+        to: '11-30-2023',
         task: '...',
         detail: '...',
         subtasks: [],
@@ -96,84 +157,22 @@ const data = [
     },
     {
         name: 'HuyHT',
-        from: '02-03-2023',
-        to: '02-09-2023',
+        from: '12-03-2023',
+        to: '12-09-2023',
         task: '...',
         detail: '...',
         subtasks: []
     },
     {
         name: 'HuyHT',
-        from: '02-07-2023',
-        to: '02-14-2023',
+        from: '12-07-2023',
+        to: '12-14-2023',
         task: '...',
         detail: '...',
         subtasks: [],
         status: 1
     },
-    {
-        name: 'HuyHT',
-        from: '03-01-2023',
-        to: '03-13-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: 2
-    },
-    {
-        name: 'HuyHT',
-        from: '03-05-2023',
-        to: '03-08-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: 2
-    },
-    {
-        name: 'HuyHT',
-        from: '03-01-2023',
-        to: '03-03-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: 2
-    },
-    {
-        name: 'HuyHT',
-        from: '18-03-2023',
-        to: '20-03-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: -1
-    },
-    {
-        name: 'HuyHT',
-        from: '03-16-2023',
-        to: '03-27-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: -1
-    },
-    {
-        name: 'HuyHT',
-        from: '03-23-2023',
-        to: '03-29-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: 2
-    },
-    {
-        name: 'HuyHT',
-        from: '03-24-2023',
-        to: '03-25-2023',
-        task: '...',
-        detail: '...',
-        subtasks: [],
-        status: -1
-    },
+
 
 ]
 
@@ -187,6 +186,7 @@ function Gantt() {
                     gridTemplateColumns: 'repeat(2, 1fr)',
                 }}>
                     <CollapsibleTable data={data}></CollapsibleTable>
+                    <Calendar data={data}></Calendar>
                 </Box>
             </Container>
 
