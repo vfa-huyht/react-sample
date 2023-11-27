@@ -63,9 +63,18 @@ function Calendar(props: { data: any, selectedItem: any, indexClick: any }) {
         }
 
     }, 0)
+    setTimeout(() => {
+        const table = document.getElementById("mainTable");
+        const calendar = document.getElementById("calendar");
+        calendar.addEventListener('scroll', () => {
+            table.scrollTop = calendar.scrollTop
+        })
+
+
+    }, 500)
     return (
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer ref={tableRef} sx={{ maxHeight: 900 }} className="calendar-table">
+            <TableContainer id="calendar" ref={tableRef} sx={{ maxHeight: 900 }} className="calendar-table">
                 <Table stickyHeader aria-label="sticky table">
                     <TableHead>
                         <TableRow style={{ height: 57 }}>
